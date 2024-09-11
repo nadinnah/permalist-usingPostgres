@@ -22,7 +22,7 @@ let items = [
 ];
 
 async function getCurrentItems(){
-  const result = await db.query("SELECT * FROM items");
+  const result = await db.query("SELECT * FROM items ORDER BY id ASC");
   items= result.rows;
   return items;
 }
